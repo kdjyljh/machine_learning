@@ -12,9 +12,19 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+% for i = [1:length(y)]
+	% if y(i)
+		% plot(X(i,1), X(i,2), 'g+', 'markersize', 10, 'linewidth', 2);
+	% else
+		% plot(X(i,1), X(i,2), 'ro');
+	% end
+% end
 
+pos = find(y==1);
+neg = find(y==0);
 
-
+plot(X(pos,1), X(pos,2), 'g+', 'MarkerSize', 10, 'LineWidth', 2);
+plot(X(neg,1), X(neg,2), 'ro', 'MarkerFaceColor', 'r');
 
 
 
